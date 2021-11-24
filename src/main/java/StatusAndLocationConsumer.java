@@ -32,7 +32,7 @@ public class StatusAndLocationConsumer {
 
     public void runConsume(final Properties consumerProperties) {
         final String filePath = consumerProperties.getProperty("input.topic.name");
-        consumer.subscribe(Collections.singletonList("statusAndLocations"));
+        consumer.subscribe(Collections.singletonList("status-and-location"));
         try {
             while (true) {
                 ConsumerRecords records = consumer.poll(Duration.ofSeconds(1));
